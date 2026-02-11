@@ -6,8 +6,8 @@
 </description>
     <link>https://accumulo.apache.org/</link>
     <atom:link href="https://accumulo.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Feb 2026 00:22:49 +0000</pubDate>
-    <lastBuildDate>Tue, 10 Feb 2026 00:22:49 +0000</lastBuildDate>
+    <pubDate>Wed, 11 Feb 2026 21:26:33 +0000</pubDate>
+    <lastBuildDate>Wed, 11 Feb 2026 21:26:33 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
     
@@ -544,7 +544,7 @@ If the compactor processes return the memory to the OS, i.e. does not stay at th
 &lt;ol&gt;
   &lt;li&gt;Uncommented lines in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fluo-uno/install/accumulo-2.1.2/conf/cluster.yaml&lt;/code&gt; regarding the compaction coordinator and compactor q1. A single compactor process was used, q1. This allows the external compaction processes to start up.&lt;/li&gt;
   &lt;li&gt;Configured the java args for the compactor process in “accumulo-env.sh.” Line:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compactor) JAVA_OPTS=('-Xmx256m' '-Xms256m' &quot;${JAVA_OPTS[@]}&quot;) ;;&lt;/code&gt;&lt;/li&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compactor) JAVA_OPTS=(&apos;-Xmx256m&apos; &apos;-Xms256m&apos; &quot;${JAVA_OPTS[@]}&quot;) ;;&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Started accumulo with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;uno start accumulo&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -671,7 +671,7 @@ Data is taken every 5 seconds for an hour or until stopped.&lt;/p&gt;
 &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;title &lt;span class=&quot;s2&quot;&gt;&quot;Resident Set Size (RSS) Memory usage&quot;&lt;/span&gt; 
 &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;xlabel &lt;span class=&quot;s2&quot;&gt;&quot;Time&quot;&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;ylabel &lt;span class=&quot;s2&quot;&gt;&quot;Mem usage in kilobytes&quot;&lt;/span&gt;
-plot &lt;span class=&quot;s2&quot;&gt;&quot;output_mem_usage.log&quot;&lt;/span&gt; using &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;5&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:2 with lines title &lt;span class=&quot;s1&quot;&gt;'Mem usage'&lt;/span&gt;
+plot &lt;span class=&quot;s2&quot;&gt;&quot;output_mem_usage.log&quot;&lt;/span&gt; using &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;5&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:2 with lines title &lt;span class=&quot;s1&quot;&gt;&apos;Mem usage&apos;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;data&quot;&gt;Data&lt;/h2&gt;
