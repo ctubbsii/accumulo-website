@@ -54,6 +54,7 @@ jobs:
         rm -rf ../asf-site/output
         mv _site/ ../asf-site/output
         cd ../asf-site
+        git add .asf.yaml
         git add output
         git config --global user.email "test@example.com"
         git config --global user.name "test"
