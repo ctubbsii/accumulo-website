@@ -49,7 +49,7 @@ jobs:
     - name: Site publish
       run: |
         git remote update
-        git worktree add ../asf-site origin/asf-site
+        git worktree add --checkout ../asf-site origin/asf-site
         cp -f .asf.yaml ../asf-site/.asf.yaml
         rm -rf ../asf-site/output
         mv _site/ ../asf-site/output
