@@ -57,5 +57,5 @@ jobs:
         git add output
         git config --global user.email "test@example.com"
         git config --global user.name "test"
-        git commit -m "Site publish from $(git rev-parse main)"
+        git commit -m "Site publish from $(git rev-parse origin/main)"
         git push origin asf-site
