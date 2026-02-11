@@ -48,8 +48,7 @@ jobs:
         bundle exec jekyll build
     - name: Site publish
       run: |
-        git fetch origin asf-site
-        git fetch origin main
+        git remote update
         git worktree add ../asf-site origin/asf-site
         cp -f .asf.yaml ../asf-site/.asf.yaml
         rm -rf ../asf-site/output
